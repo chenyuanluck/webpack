@@ -1,4 +1,4 @@
+// 引入模块1
 require('./scripts/module');
-
-
-console.log('这TMD是一个测试！！');
+// 引入样式文件
+require('./scss/style.scss');
