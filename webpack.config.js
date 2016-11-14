@@ -4,6 +4,7 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 // 分离css插件配置
 let extractSCSS = new ExtractTextPlugin('stylesheets/[name].css');
 module.exports = {
+    devtool: 'inline-source-map',                                   // 启用source-map
     entry: './src/entry.js',                                        // 演示单入口文件
     output: {
         path: path.join(__dirname, 'main'),                         // 打包输出的路径
@@ -18,11 +19,11 @@ module.exports = {
                 loader: 'style!css?sourceMap!sass?sourceMap'
             }, {
                 test: /\.(es6)|(js)$/,
-                loader: 'babel-loader',
+                loader: 'babel?presets[]=es2015'
                 // plugins: ['babel-plugin-components'],
-                query: {
-                    presets: ['es2015']
-                }
+                // query: {
+                //     presets: ['es2015']
+                // }
             }
         ]
     },
