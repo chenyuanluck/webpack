@@ -16,6 +16,13 @@ module.exports = {
                 test: /\.scss$/,
                 // loader: extractSCSS.extract(['css?sourceMap', 'sass?sourceMap'])
                 loader: 'style!css?sourceMap!sass?sourceMap'
+            }, {
+                test: /\.(es6)|(js)$/,
+                loader: 'babel-loader',
+                // plugins: ['babel-plugin-components'],
+                query: {
+                    presets: ['es2015']
+                }
             }
         ]
     },
