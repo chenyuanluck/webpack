@@ -7,14 +7,18 @@
  * 创建日期: 2016/11/14
  * 创建时间: 16:17
  */
-import * as Config from "../profile";           //  导入配置文件
-
-let Logger = {};
+import * as Config from "../config";    // 导入配置文件
+let Logger = {};                         // 日志对象
+let emptyMethod = new Function();        // 空方法
 
 for (let k in console) {
-    if (console.hasOwnProperty(k))  Logger[k] = console[k];
+    if (console.hasOwnProperty(k)) Logger[k] = Config.ENABLED_LOGGER ? console[k] : emptyMethod;
 }
 
-Logger.log = console.log;
+if (Config.ENABLED_LOGGER) {
+    Logger.log = function (log) {
+        console.log('[' + new Date() + ']' + log);
+    }
+}
 
 export default Logger;
