@@ -6,6 +6,7 @@ let extractSCSS = new ExtractTextPlugin('stylesheets/[name].css');
 module.exports = {
     devtool: 'inline-source-map',                                   // 启用source-map
     entry: './src/entry.js',                                        // 演示单入口文件
+    debug: true,
     output: {
         path: path.join(__dirname, 'main'),                         // 打包输出的路径
         filename: 'bundle.js',                                      // 打包输出的文件名
