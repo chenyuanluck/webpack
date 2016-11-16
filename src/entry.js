@@ -1,5 +1,22 @@
-import Logger from "./scripts/utils/log";
-import set from "./scripts/setMap/set";
+/**
+ * 描述: 入口脚本
+ * 版权: Copyright (c) 2016
+ * 公司: 深圳市昊晨科技开发有限公司
+ * 作者: 陈元
+ * 版本: 1.0
+ * 创建日期: 2016/11/15
+ * 创建时间: 15:57
+ */
+import Logger from "./scripts/utils/log";       // 日志类
+import set from "./scripts/setMap/set";         // 集合
+import {AjaxUtils} from "./scripts/utils/ajax";   // ajax工具
+import DateUtils from "./scripts/utils/date";
 
 Logger.log(set, "查看set对象");
 
+AjaxUtils.get("./json/hello.json?aa=1", {
+    name: "send",
+    createTime: new DateUtils().format()
+}, function (data) {
+    console.log(data);
+});
