@@ -7,16 +7,5 @@
  * 创建日期: 2016/11/15
  * 创建时间: 15:57
  */
-import Logger from "./scripts/utils/log";       // 日志类
 import set from "./scripts/setMap/set";         // 集合
-import {AjaxUtils} from "./scripts/utils/ajax";   // ajax工具
-import DateUtils from "./scripts/utils/date";
 
-Logger.log(set, "查看set对象");
-
-AjaxUtils.get("./json/hello.json?aa=1", {
-    name: "send",
-    createTime: new DateUtils().format()
-}, function (data) {
-    console.log(data);
-});

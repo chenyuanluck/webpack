@@ -11,11 +11,6 @@ class Ajax {
     constructor() {
     }
 
-    /**
-     *
-     * @param params
-     * @returns {{contentType: string, dataType: string, type: string, params: {}}}
-     */
     getRequestParams(params) {
         let defaultParams = {                  // 默认请求入参
             contentType: "application/json",
@@ -94,6 +89,15 @@ class Ajax {
 }
 
 let AjaxUtils = new Ajax();
+
+
+// eg:
+// AjaxUtils.get("./json/hello.json?aa=1", {
+//     name: "send",
+//     createTime: new DateUtils().format()
+// }, function (data) {
+//     console.log(data);
+// });
 
 export default AjaxUtils;
 export {AjaxUtils};
