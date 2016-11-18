@@ -7,5 +7,6 @@
  * 创建日期: 2016/11/15
  * 创建时间: 15:57
  */
-import set from "./scripts/setMap/set";         // 集合
+// import set from "./scripts/setMap/set";         // 集合
+import map from "./scripts/setMap/map";         // map
 
