@@ -8,5 +8,17 @@
  * 创建时间: 15:57
  */
 // import set from "./scripts/setMap/set";         // 集合
-import map from "./scripts/setMap/map";         // map
+// import map from "./scripts/setMap/map";           // map
+import symbol from "./scripts/symbol/symbol";
+// import AjaxUtils from "./scripts/utils/ajax";
+// import DateUtils from "./scripts/utils/date";
+
+
+// eg:
+// AjaxUtils.get("./json/hello.json?aa=1", {
+//     name: "send",
+//     createTime: new DateUtils().format()
+// }, function (data) {
+//     console.log(data);
+// });
 

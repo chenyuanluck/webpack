@@ -18,6 +18,11 @@ class Ajax {
             type: "POST",
             params: {}
         };
+        // let map = new Map();
+        // map.set("contentType", "application/json");     // 默认文件类型
+        // map.set("dataType", "json");                    // 默认返回数据类型
+        // map.set("type", "POST");                        // 默认提交方式
+        // map.set("params", {});                          // 默认提交参数
         for (let k in params) {
             if (params.hasOwnProperty(k))
                 defaultParams[k] = params[k];
@@ -89,15 +94,6 @@ class Ajax {
 }
 
 let AjaxUtils = new Ajax();
-
-
-// eg:
-// AjaxUtils.get("./json/hello.json?aa=1", {
-//     name: "send",
-//     createTime: new DateUtils().format()
-// }, function (data) {
-//     console.log(data);
-// });
 
 export default AjaxUtils;
 export {AjaxUtils};

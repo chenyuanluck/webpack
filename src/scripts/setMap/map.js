@@ -7,8 +7,10 @@
  * 创建日期: 2016/11/18
  * 创建时间: 10:26
  */
-var data = {};
-var element = document.getElementById('h1');
-
-data[element] = 'metadata';
-data['[object HTMLDivElement]'] // "metadata"
+let map = new Map([
+    ['F', 'no'],
+    ['T', 'yes'],
+]);
+for(let [k, o] of map) {
+    console.info(k + ' : ' + o);
+}
